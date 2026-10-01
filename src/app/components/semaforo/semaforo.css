@@ -1,0 +1,27 @@
+.cajita{
+    border: solid 2px black;
+    height: 150px;
+    width: 50px;
+    background-color: rgb(93, 93, 93);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.circulo{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: solid 2px black;
+}
+.rojo{
+    background-color: red;
+}
+.naranja{
+    background-color: orange;
+}
+.verde{
+    background-color: green;
+}

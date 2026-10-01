@@ -1,0 +1,25 @@
+<div class="cajita">
+    <div class="circulo rojo">
+    </div>
+        <div class="circulo naranja">
+    </div>
+        <div class="circulo verde">
+    </div>
+
+</div>
+
+
+<h1 [style.color]="colorin()"> {{ contador() }}</h1>
+
+<button (click)="incrementar()">+1</button>
+<button (click)="decrementar()">-1</button>
+<button (click)="resetear()">Reset</button>
+
+
+<p>LA siguiente prueba es para '@ if'</p>
+
+@if(contador()>=0){
+    <p style="color: green" >El número es positivo</p>
+}@else{
+    <p style="color: red">El número es negativo</p>
+}
