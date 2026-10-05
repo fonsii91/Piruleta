@@ -1,10 +1,24 @@
 <div class="cajita">
-    <div class="circulo rojo">
-    </div>
-        <div class="circulo naranja">
-    </div>
-        <div class="circulo verde">
-    </div>
+
+    @if(contador()>=2){
+      <div class="circulo rojo"></div>
+    }@else {
+      <div class="circulo gris"></div>      
+    }
+    
+    
+    @if(contador()==1){
+     <div class="circulo naranja"></div>
+    }@else {
+      <div class="circulo gris"></div>     
+    }
+    
+    
+    @if(contador()==0) {
+     <div class="circulo verde"></div>
+    }@else {
+      <div class="circulo gris"></div>      
+    }
 
 </div>
 
