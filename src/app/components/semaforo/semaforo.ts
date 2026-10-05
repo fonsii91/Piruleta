@@ -10,6 +10,7 @@ export class Semaforo {
 
   contador = signal(0);
   colorin = signal("red");
+  repeticiones = [1, 1, 1, 1, 1,1, 1, 1, 1];
 
 
 
