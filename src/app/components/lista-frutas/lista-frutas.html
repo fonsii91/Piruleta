@@ -1,15 +1,14 @@
 <ul>
     @for(fruta of frutas; track fruta){
-        <li>{{ fruta.nombre }}: 
+        <li>
+             <img class="fruta" [src]="fruta.imagen">
+            {{ fruta.nombre }}: 
             @if(fruta.like){
                 👍
             }
         </li>
     }
 
-    @for(fruta of frutas; track fruta){
-        <img [src]="fruta.imagen">
-    
-    }
+
 
 </ul>
