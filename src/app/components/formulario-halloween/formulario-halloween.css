@@ -1,0 +1,9 @@
+.texto-error{
+    color: brown;
+    font-size: x-small;
+}
+.formulario{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+}

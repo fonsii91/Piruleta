@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   imports: [MatToolbarModule, RouterLink],
@@ -8,4 +8,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './nav-bar.css',
   templateUrl: './nav-bar.html',
 })
-export class NavBar {}
+export class NavBar {
+  
+private router = inject(Router);
+
+  lista(){
+    console.log("Buenos diassssssssssssssssssssssss");
+    this.router.navigate(['/lista-frutas']);
+  }
+
+
+}
