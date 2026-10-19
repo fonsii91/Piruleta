@@ -1,0 +1,12 @@
+.navbar{
+    
+}
+.opcion{
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+.opcion:hover{
+     color: rgb(252, 51, 222);
+}
