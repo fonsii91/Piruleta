@@ -1,6 +1,9 @@
-<app-hijo [mensaje]="'Hola papá'"></app-hijo>
+<div class="padre">
+<h1>{{ textoRecibido }}</h1>
+<app-hijo [mensaje]="'Hola papá'" (notificar)="manejarEvento($event)"></app-hijo>
 <app-hijo></app-hijo>
 <app-hijo [mensaje]="'que pasa!!'"></app-hijo>
 <app-hijo></app-hijo>
 <app-hijo></app-hijo>
 <app-hijo></app-hijo>
+</div>

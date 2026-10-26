@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   imports: [],
@@ -10,6 +10,14 @@ export class Hijo {
 
    mensaje = input('');
 
+   notificar = output<string>();
+
+
+
+
+   hablarPadre(){
+    this.notificar.emit('Mensaje desde el hijo');
+   }
 
 
 }
