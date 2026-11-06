@@ -13,7 +13,7 @@ export class NavBar {
 private router = inject(Router);
 
   lista(){
-    console.log("Buenos diassssssssssssssssssssssss");
+   
     this.router.navigate(['/lista-frutas']);
   }
 

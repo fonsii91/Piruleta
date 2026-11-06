@@ -12,6 +12,8 @@ export class Padre {
 
   textoRecibido:string="aun no se ha cominicado con nosotros ninguno de los hijos";
   patata=0;
+
+  
   manejarEvento(texto:string){
     this.textoRecibido=texto;
   }
