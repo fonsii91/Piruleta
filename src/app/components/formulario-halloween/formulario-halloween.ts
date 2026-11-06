@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Saludo } from '../../services/saludo';
 
 @Component({
   imports: [ReactiveFormsModule],
@@ -9,8 +10,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class FormularioHalloween {
 
+  servicioSaludo = inject(Saludo);
+
 formularioHalloween = new FormGroup({
-  nombre: new FormControl('', [Validators.required, Validators.maxLength(50), Validators.minLength(3)]),
+  nombre: new FormControl('',  [Validators.required, Validators.maxLength(50), Validators.minLength(3)]),
   email: new FormControl('', [Validators.required, Validators.email]),
   edad: new FormControl('', [Validators.required, Validators.min(0), Validators.max(200)])
 })
@@ -20,6 +23,8 @@ formularioHalloween = new FormGroup({
 
     console.log(this.formularioHalloween.value);
     console.log(this.formularioHalloween.get('email')?.value);
+
+    this.servicioSaludo.setNombre(this.formularioHalloween.get('nombre')?.value);
   }
 
 

@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { Saludo } from '../../services/saludo';
 
 @Component({
   imports: [MatButtonModule],
@@ -8,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './semaforo.html',
 })
 export class Semaforo {
+
+  servicioSaludo = inject(Saludo);
 
   contador = signal(0);
   colorin = signal("red");
